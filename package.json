@@ -1,19 +1,16 @@
 {
-  "name": "react-toast-flick",
-  "version": "1.0.0",
+  "name": "react-flare-toast",
+  "version": "1.0.3",
   "type": "module",
-  "description": "React Toast Flick is a simple and customizable toast notification component for React applications.",
+  "description": "React Flare Toast is a simple and customizable toast component for React applications.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c"
   },
   "keywords": [
-    "react",
     "react-toast",
-    "react-toast-flick",
-    "toast",
-    "flick"
+    "react-flare-toast"
   ],
   "author": "Priyam Mondal",
   "license": "ISC",

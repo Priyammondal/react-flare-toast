@@ -1,4 +1,4 @@
-.notification {
+.toast {
   outline: none;
   padding: 15px;
   margin: 10px;
@@ -45,14 +45,14 @@
   left: 20px;
 }
 
-.notification-container {
+.toast-container {
   display: flex;
   align-items: flex-end;
 }
-.notification-container.top {
+.toast-container.top {
   flex-direction: column;
 }
-.notification-container.bottom {
+.toast-container.bottom {
   flex-direction: column-reverse;
 }
 

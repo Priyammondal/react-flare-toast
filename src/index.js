@@ -1,2 +1,2 @@
-import useNotification from "./hooks/useNotification.jsx";
-export default useNotification;
+import useToast from "./hooks/useToast.jsx";
+export default useToast;

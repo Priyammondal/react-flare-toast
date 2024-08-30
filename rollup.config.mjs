@@ -8,7 +8,7 @@ export default {
   input: "src/index.js",
   output: {
     file: "dist/index.js",
-    format: "cjs", // This output format is CommonJS for Node.js usage
+    format: "cjs",
     sourcemap: true,
   },
   plugins: [
@@ -21,8 +21,8 @@ export default {
       exclude: "node_modules/**",
       extensions: [".js", ".jsx"],
     }),
-    terser(), // Optional: Minify the output
+    terser(),
     postcss(),
   ],
-  external: ["react", "react-dom"], // Exclude React and ReactDOM from the bundle
+  external: ["react", "react-dom"],
 };

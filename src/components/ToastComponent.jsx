@@ -6,7 +6,7 @@ import {
   AiOutlineCloseCircle,
   AiOutlineClose,
 } from "react-icons/ai";
-import "./notification.css";
+import "./Toast.css";
 
 const icons = {
   success: <AiOutlineCheckCircle />,
@@ -21,17 +21,17 @@ const animations = {
   slide: "slideIn",
 };
 
-const notification = ({
+const ToastComponent = ({
   type = "info",
   message,
   onClose,
   animation = "slide",
 }) => {
-  const notificationRef = useRef(null);
+  const toastRef = useRef(null);
 
   useEffect(() => {
-    if (notificationRef.current) {
-      notificationRef.current.focus();
+    if (toastRef.current) {
+      toastRef.current.focus();
     }
   }, []);
 
@@ -41,11 +41,11 @@ const notification = ({
 
   return (
     <div
-      className={`notification ${type} ${animations[animation]}`}
+      className={`toast ${type} ${animations[animation]}`}
       role={ariaRole}
       aria-live={ariaLive}
       tabIndex={-1}
-      ref={notificationRef}
+      ref={toastRef}
     >
       {icons[type]}
       {message}
@@ -58,4 +58,4 @@ const notification = ({
   );
 };
 
-export default notification;
+export default ToastComponent;
