@@ -1,5 +1,6 @@
 node_modules
 src
-rollup.config.js
-tsconfig.json
 .gitignore
+babel.config.mjs
+rollup.config.mjs
+LICENSE
