@@ -2,7 +2,7 @@
 
 React Flare Toast is a simple and customizable toast component for React applications.
 
-(![./src/assets/react-flare-toast-demo.gif](https://github.com/Priyammondal/react-flare-toast/blob/main/src/assets/react-flare-toast-demo.gif))
+![./src/assets/react-flare-toast-demo.gif](https://github.com/Priyammondal/react-flare-toast/blob/main/src/assets/react-flare-toast-demo.gif)
 
 ## Installation
 
