@@ -1,7 +1,7 @@
 .toast {
   outline: none;
-  padding: 15px;
-  margin: 10px;
+  padding: 10px;
+  margin: 5px 0px;
   color: white;
   display: flex;
   align-items: center;
