@@ -30,8 +30,10 @@ const { Toast, triggerToast } = useToast("top-right");
 
 #### Postions
 
+- "top"
 - "top-left"
 - "top-right"
+- "bottom"
 - "bottom-left"
 - "bottom-right"
 

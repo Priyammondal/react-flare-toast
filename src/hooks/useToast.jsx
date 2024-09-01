@@ -23,7 +23,7 @@ const useToast = (position = "top-right") => {
   };
 
   const Toast = toasts ? (
-    <div className={`toast-container ${position} ${position.split("-")[0]}`}>
+    <div className={`toast-container ${position}`}>
       {toasts.map((toast, index) => (
         <ToastComponent
           key={toast.id}

@@ -24,35 +24,45 @@
 
 /* toast positioning  */
 
-.top-right {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
-.top-left {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-}
-.bottom-right {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
-.bottom-left {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-}
-
 .toast-container {
+  position: fixed;
   display: flex;
   align-items: flex-end;
 }
-.toast-container.top {
+.top {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center !important;
+}
+.top-right {
+  top: 10px;
+  right: 10px;
   flex-direction: column;
 }
-.toast-container.bottom {
+.top-left {
+  top: 10px;
+  left: 10px;
+  align-items: flex-start !important;
+  flex-direction: column;
+}
+.bottom {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column-reverse;
+  align-items: center !important;
+}
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  flex-direction: column-reverse;
+}
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  align-items: flex-start !important;
   flex-direction: column-reverse;
 }
 
