@@ -1,12 +1,12 @@
 import React from "react";
 import { useCallback, useState } from "react";
 import ToastComponent from "../components/ToastComponent";
-import { v4 as uuidv4 } from "uuid";
+import { nanoid } from "nanoid";
 
 const useToast = (position = "top-right") => {
   const [toasts, setToasts] = useState([]);
   const triggerToast = useCallback((toastProps) => {
-    const toastId = uuidv4();
+    const toastId = nanoid();
     setToasts((prev) => [...prev, { id: toastId, ...toastProps }]);
 
     setTimeout(() => {

@@ -10,16 +10,23 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .success {
-  background-color: #4caf50;
+  background-color: #28a745;
 }
 .info {
-  background-color: #2196f3;
+  background-color: #17a2b8;
 }
 .warning {
-  background-color: #ff9800;
+  background-color: #ffc107;
 }
 .error {
-  background-color: #f44336;
+  background-color: #dc3545;
+}
+
+.icon {
+  width: 1.2em; /* Adjust as needed */
+  height: 1.2em; /* Adjust as needed */
+  vertical-align: middle;
+  color: currentColor; /* Ensure the color matches your theme */
 }
 
 /* toast positioning  */
@@ -31,6 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: fit-content;
 }
 .top {
   top: 10px;

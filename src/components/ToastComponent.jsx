@@ -1,18 +1,98 @@
 import React, { useEffect, useRef } from "react";
-import {
-  AiOutlineCheckCircle,
-  AiOutlineInfoCircle,
-  AiOutlineWarning,
-  AiOutlineCloseCircle,
-  AiOutlineClose,
-} from "react-icons/ai";
 import "./Toast.css";
 
+const CheckCircleIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M9 12l2 2 4-4" />
+  </svg>
+);
+
+const InfoCircleIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 16v-4m0 0V8m0 8h.01" />
+  </svg>
+);
+
+const WarningIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon"
+    width="1.5em"
+    height="1.5em"
+  >
+    <path
+      d="M12 3l9 16H3l9-16z"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M12 9v4m0 4h.01" strokeWidth="2" />
+  </svg>
+);
+
+const CloseCircleIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M16 8L8 16M8 8l8 8" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const CloseIcon = ({ onClose }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="icon closeBtn"
+    onClick={() => onClose()}
+  >
+    <path d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
+
 const icons = {
-  success: <AiOutlineCheckCircle />,
-  info: <AiOutlineInfoCircle />,
-  warning: <AiOutlineWarning />,
-  error: <AiOutlineCloseCircle />,
+  success: <CheckCircleIcon />,
+  info: <InfoCircleIcon />,
+  warning: <WarningIcon />,
+  error: <CloseCircleIcon />,
 };
 
 const animations = {
@@ -49,11 +129,7 @@ const ToastComponent = ({
     >
       {icons[type]}
       {message}
-      <AiOutlineClose
-        color="white"
-        className="closeBtn"
-        onClick={() => onClose()}
-      />
+      <CloseIcon color="white" onClose={onClose} />
     </div>
   );
 };
