@@ -6,13 +6,12 @@ import postcss from "rollup-plugin-postcss";
 import cssnano from "cssnano";
 import analyze from "rollup-plugin-analyzer";
 
-const isProduction = process.env.NODE_ENV === "production";
 export default {
   input: "src/index.js",
   output: {
     file: "dist/index.js",
     format: "esm",
-    sourcemap: !isProduction,
+    sourcemap: false,
   },
   plugins: [
     analyze({ summaryOnly: true }),
@@ -36,11 +35,19 @@ export default {
         "@babel/preset-react",
       ],
     }),
-    terser(),
+    terser({
+      compress: {
+        drop_console: true, // Remove console logs
+        passes: 2, // Try multiple passes to compress more
+      },
+      mangle: {
+        toplevel: true, // Shorten top-level variable names
+      },
+    }),
     postcss({
       plugins: [cssnano()],
       minimize: true,
     }),
   ],
-  external: ["react", "react-dom", "nanoid", "react-icons/ai"],
+  external: ["react", "react-dom"],
 };
