@@ -28,7 +28,7 @@ Initialize the useToast hook with your preferred position:
 const { Toast, triggerToast } = useToast("top-right");
 ```
 
-#### Postions
+#### Positions
 
 - "top"
 - "top-left"
